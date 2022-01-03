@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "410485963026",
+    "project_id": "encryption-fee5e",
+    "storage_bucket": "encryption-fee5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410485963026:android:3eb2cb44bbce4a4ed39bcb",
+        "android_client_info": {
+          "package_name": "com.example.encrypted_messaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410485963026-hlh442dh2q3u5rb6khmcd5luhavcc287.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQI2R3Dz0XEcu68ePQxojgG9PBGdoYyGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410485963026-hlh442dh2q3u5rb6khmcd5luhavcc287.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
