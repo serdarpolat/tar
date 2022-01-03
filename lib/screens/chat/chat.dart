@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:encrypted_messaging/models/user_model.dart';
 import 'package:encrypted_messaging/screens/chat/sender.dart';
-import 'package:encrypted_messaging/services/data/firestore_db.dart';
 import 'package:encrypted_messaging/services/encryption/i_encryption_service.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
 import 'package:flutter/material.dart';

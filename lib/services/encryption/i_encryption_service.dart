@@ -1,4 +1,3 @@
-import 'package:encrypted_messaging/models/user_model.dart';
 import 'package:encrypted_messaging/services/encryption/encryption_service.dart';
 
 class IEncryptionService {

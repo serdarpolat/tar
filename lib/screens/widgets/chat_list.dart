@@ -17,7 +17,6 @@ class ChatList extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Size s = MediaQuery.of(context).size;
     return ListView(
       padding: EdgeInsets.all(0),
       children: data.docs.map((e) {

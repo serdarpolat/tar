@@ -1,20 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:encrypted_messaging/main.dart';
-import 'package:encrypted_messaging/models/bottom_icon_model.dart';
-import 'package:encrypted_messaging/models/chat_model.dart';
 import 'package:encrypted_messaging/models/user_model.dart';
-import 'package:encrypted_messaging/screens/contacts/contacts.dart';
 import 'package:encrypted_messaging/screens/profile/profile.dart';
 import 'package:encrypted_messaging/screens/widgets/chat_list.dart';
 import 'package:encrypted_messaging/screens/widgets/h_bottombar.dart';
-import 'package:encrypted_messaging/services/auth/i_auth_service.dart';
-import 'package:encrypted_messaging/services/data/i_firestore_db.dart';
-import 'package:encrypted_messaging/services/providers/providers.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive/hive.dart';
-import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'appbar.dart';

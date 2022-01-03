@@ -1,5 +1,4 @@
 import 'package:encrypted_messaging/models/user_model.dart';
-import 'package:encrypted_messaging/screens/auth/login/login.dart';
 import 'package:encrypted_messaging/screens/auth/register/register.dart';
 import 'package:encrypted_messaging/screens/contacts/contacts.dart';
 import 'package:encrypted_messaging/screens/home/home.dart';

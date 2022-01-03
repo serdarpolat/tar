@@ -1,9 +1,7 @@
 import 'package:encrypted_messaging/screens/auth/register/register.dart';
-import 'package:encrypted_messaging/services/providers/providers.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:provider/provider.dart';
 
 import 'login_form.dart';
 
