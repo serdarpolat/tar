@@ -23,42 +23,8 @@ class CAppbar extends StatelessWidget {
       child: paddingHorizontal(
         context,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pop();
-              },
-              child: Container(
-                width: ww(context, 74),
-                child: Row(
-                  children: [
-                    Container(
-                      width: ww(context, 30),
-                      height: ww(context, 30),
-                      padding: EdgeInsets.all(ww(context, 3)),
-                      child: SvgPicture.asset(
-                        "assets/icons/ArrowBack.svg",
-                      ),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Clr.lightBlue,
-                      ),
-                    ),
-                    Spacer(),
-                    Text(
-                      "Back",
-                      style: TextStyle(
-                        fontSize: hh(context, 16),
-                        fontWeight: FontWeight.w700,
-                        color: Clr.blue,
-                        height: 1.18,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
             Container(
               child: Text(
                 "Contacts",
@@ -68,9 +34,6 @@ class CAppbar extends StatelessWidget {
                   color: Clr.text,
                 ),
               ),
-            ),
-            Container(
-              width: ww(context, 74),
             ),
           ],
         ),

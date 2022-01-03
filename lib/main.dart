@@ -1,6 +1,7 @@
 import 'package:encrypted_messaging/models/user_model.dart';
 import 'package:encrypted_messaging/screens/auth/login/login.dart';
 import 'package:encrypted_messaging/screens/auth/register/register.dart';
+import 'package:encrypted_messaging/screens/contacts/contacts.dart';
 import 'package:encrypted_messaging/screens/home/home.dart';
 import 'package:encrypted_messaging/services/providers/providers.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => LoadingState()),
         ChangeNotifierProvider(create: (_) => SearchQuery()),
         ChangeNotifierProvider(create: (_) => DeleteContact()),
+        ChangeNotifierProvider(create: (_) => PageProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -57,11 +59,22 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FirebaseAuth auth = FirebaseAuth.instance;
-    final provider = Provider.of<IsLoginPage>(context);
-    return auth.currentUser != null
-        ? Home()
-        : provider.isLogin
-            ? Login()
-            : Register();
+    return auth.currentUser != null ? Home() : Register();
+  }
+}
+
+class PageGate extends StatelessWidget {
+  const PageGate({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final pageProvider = Provider.of<PageProvider>(context, listen: false);
+    if (pageProvider.page == 0) {
+      return Home();
+    } else if (pageProvider.page == 1) {
+      return Contacts();
+    } else {
+      return Home();
+    }
   }
 }

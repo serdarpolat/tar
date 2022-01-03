@@ -74,44 +74,8 @@ Widget searchAppbarBottom(BuildContext context, Size s) => Expanded(
 Widget searchAppbarTop(BuildContext context) => paddingHorizontal(
       context,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          GestureDetector(
-            onTap: () {
-              final query = Provider.of<SearchQuery>(context, listen: false);
-              query.changeSearchTitle("");
-              Navigator.of(context).pop();
-            },
-            child: Container(
-              width: ww(context, 74),
-              child: Row(
-                children: [
-                  Container(
-                    width: ww(context, 30),
-                    height: ww(context, 30),
-                    padding: EdgeInsets.all(ww(context, 3)),
-                    child: SvgPicture.asset(
-                      "assets/icons/ArrowBack.svg",
-                    ),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Clr.lightBlue,
-                    ),
-                  ),
-                  Spacer(),
-                  Text(
-                    "Back",
-                    style: TextStyle(
-                      fontSize: hh(context, 16),
-                      fontWeight: FontWeight.w700,
-                      color: Clr.blue,
-                      height: 1.18,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
           Container(
             child: Text(
               "Search Contact",
@@ -121,9 +85,6 @@ Widget searchAppbarTop(BuildContext context) => paddingHorizontal(
                 color: Clr.text,
               ),
             ),
-          ),
-          Container(
-            width: ww(context, 74),
           ),
         ],
       ),

@@ -10,4 +10,6 @@ class Clr {
   static const Color blue = Color(0xFF377DFF);
   static const Color lightBlue = Color(0xFFE5F1FF);
   static const Color green = Color(0xFF2DCA8C);
+  static const Color pink = Color(0xfff72585);
+  static const Color red = Color(0xffff0a54);
 }

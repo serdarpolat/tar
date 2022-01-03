@@ -4,8 +4,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class HAppbar extends StatelessWidget {
   final VoidCallback onTap;
+  final List<String>? myPrefs;
 
-  const HAppbar({Key? key, required this.onTap}) : super(key: key);
+  const HAppbar({
+    Key? key,
+    required this.onTap,
+    this.myPrefs,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;
@@ -46,7 +51,8 @@ class HAppbar extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(ww(context, 40)),
-                      child: SvgPicture.asset("assets/images/user/1.svg"),
+                      child:
+                          SvgPicture.asset("assets/images/user/${myPrefs![4]}"),
                     ),
                     Positioned(
                       bottom: 0,

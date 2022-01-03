@@ -1,8 +1,6 @@
 import 'package:encrypted_messaging/main.dart';
-import 'package:encrypted_messaging/screens/auth/widgets.dart';
-import 'package:encrypted_messaging/screens/home/home.dart';
+import 'package:encrypted_messaging/screens/widgets/widgets.dart';
 import 'package:encrypted_messaging/services/auth/i_auth_service.dart';
-import 'package:encrypted_messaging/services/data/firestore_db.dart';
 import 'package:encrypted_messaging/services/providers/providers.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
 import 'package:flutter/material.dart';

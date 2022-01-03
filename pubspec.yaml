@@ -1,7 +1,7 @@
 name: encrypted_messaging
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -23,6 +23,7 @@ dependencies:
   hive_flutter: ^1.0.0
   provider: ^5.0.0
   shared_preferences: ^2.0.6
+  ionicons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
@@ -31,7 +32,6 @@ dev_dependencies:
   hive_generator: ^1.1.0
 
 flutter:
-
   uses-material-design: true
 
   assets:

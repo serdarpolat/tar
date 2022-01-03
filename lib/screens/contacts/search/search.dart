@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:encrypted_messaging/models/user_model.dart';
+import 'package:encrypted_messaging/screens/widgets/h_bottombar.dart';
 import 'package:encrypted_messaging/services/data/firestore_db.dart';
 import 'package:encrypted_messaging/services/data/i_firestore_db.dart';
 import 'package:encrypted_messaging/services/providers/providers.dart';
@@ -114,6 +115,10 @@ class _SearchState extends State<Search> {
               }),
             ),
             SAppbar(),
+            HBottombar(
+              page: 2,
+              myPrefs: widget.myPrefs,
+            ),
           ],
         ),
       ),

@@ -2,12 +2,10 @@ import 'dart:math';
 
 import 'package:encrypted_messaging/main.dart';
 import 'package:encrypted_messaging/models/user_model.dart';
-import 'package:encrypted_messaging/screens/auth/widgets.dart';
+import 'package:encrypted_messaging/screens/widgets/widgets.dart';
 import 'package:encrypted_messaging/services/auth/i_auth_service.dart';
-import 'package:encrypted_messaging/services/data/firestore_db.dart';
 import 'package:encrypted_messaging/services/data/i_firestore_db.dart';
 import 'package:encrypted_messaging/services/providers/providers.dart';
-import 'package:encrypted_messaging/services/theme/methods.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
 import 'package:encryption/encryption.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +33,6 @@ class _RegisterFormState extends State<RegisterForm> {
 
   @override
   void dispose() {
-    Hive.close();
     emailCtrl.dispose();
     passCtrl.dispose();
     passAgainCtrl.dispose();
@@ -153,6 +150,7 @@ class _RegisterFormState extends State<RegisterForm> {
                             print(5);
                             if (value) {
                               print(6);
+
                               loading.changeLoadingState(false);
                               Routing.pushRep(context, Wrapper());
                             }

@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:encrypted_messaging/models/user_model.dart';
-import 'package:encrypted_messaging/screens/auth/widgets.dart';
 import 'package:encrypted_messaging/screens/chat/chat.dart';
+import 'package:encrypted_messaging/screens/widgets/h_bottombar.dart';
 import 'package:encrypted_messaging/services/data/i_firestore_db.dart';
 import 'package:encrypted_messaging/services/providers/providers.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
@@ -13,7 +13,6 @@ import 'package:hive/hive.dart';
 import 'package:provider/provider.dart';
 
 import 'appbar.dart';
-import 'search/search.dart';
 
 class Contacts extends StatefulWidget {
   final List<String>? myPrefs;
@@ -77,18 +76,22 @@ class _ContactsState extends State<Contacts> {
                   isOpen: toggle.del,
                 );
               }),
+              HBottombar(
+                page: 1,
+                myPrefs: [],
+              ),
             ],
           ),
         ),
-        floatingActionButton: toggle.del
-            ? Container()
-            : FloatingActionButton(
-                onPressed: () {
-                  Routing.push(context, Search(myPrefs: widget.myPrefs));
-                },
-                backgroundColor: Clr.blue,
-                child: Icon(Icons.add),
-              ),
+        // floatingActionButton: toggle.del
+        //     ? Container()
+        //     : FloatingActionButton(
+        //         onPressed: () {
+        //           Routing.push(context, Search(myPrefs: widget.myPrefs));
+        //         },
+        //         backgroundColor: Clr.blue,
+        //         child: Icon(Icons.add),
+        //       ),
       );
     });
   }

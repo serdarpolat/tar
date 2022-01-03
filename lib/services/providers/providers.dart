@@ -41,3 +41,13 @@ class DeleteContact with ChangeNotifier {
     notifyListeners();
   }
 }
+
+class PageProvider with ChangeNotifier {
+  int _page = 0;
+  int get page => _page;
+
+  changePage(int i) {
+    _page = i;
+    notifyListeners();
+  }
+}

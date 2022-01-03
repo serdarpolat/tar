@@ -1,3 +1,4 @@
+import 'package:encrypted_messaging/screens/auth/login/login.dart';
 import 'package:encrypted_messaging/services/providers/providers.dart';
 import 'package:encrypted_messaging/services/theme/theme_index.dart';
 import 'package:flutter/material.dart';
@@ -41,9 +42,7 @@ class Register extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      final isLogin =
-                          Provider.of<IsLoginPage>(context, listen: false);
-                      isLogin.changeLoginState();
+                      Routing.pushRep(context, Login());
                     },
                     child: Text(
                       "Login",
