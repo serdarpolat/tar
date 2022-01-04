@@ -68,7 +68,7 @@ class _ContactsState extends State<Contacts> {
                             box: usersBox!,
                             myPrefs: widget.myPrefs!,
                           )
-                        : Center(child: Text("No Data")),
+                        : Center(child: Text("Your contact list is empty")),
               ),
               CAppbar(),
               Consumer(builder: (_, DeleteContact toggle, Widget? child) {

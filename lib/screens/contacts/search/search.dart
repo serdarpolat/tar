@@ -37,7 +37,7 @@ class _SearchState extends State<Search> {
               padding: EdgeInsets.only(top: hh(context, 152)),
               child: Consumer(builder:
                   (BuildContext context, SearchQuery query, Widget? child) {
-                if (query.title.length < 3) return Text("No Contact");
+                if (query.title.length < 3) return SizedBox();
 
                 return StreamBuilder(
                     stream: _db.getUserByName(query.title),
